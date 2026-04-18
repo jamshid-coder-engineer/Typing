@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Monkeytype foni va shriftlari */
+@theme {
+  --color-bg: #2c2e31;
+  --color-main: #e2b714;
+  --color-text: #d1d0c5;
+  --color-sub: #646669;
+}
+
+body {
+  background-color: #2c2e31;
+  color: #d1d0c5;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+}

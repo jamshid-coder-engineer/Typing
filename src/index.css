@@ -1,16 +1,33 @@
 @import "tailwindcss";
 
-/* Monkeytype foni va shriftlari */
-@theme {
-  --color-bg: #2c2e31;
-  --color-main: #e2b714;
-  --color-text: #d1d0c5;
-  --color-sub: #646669;
+/* Xato so'z ostidagi to'lqinli chiziq */
+.wave-error {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4px;
 }
 
-body {
-  background-color: #2c2e31;
-  color: #d1d0c5;
-  font-family: 'Roboto Mono', monospace;
-  margin: 0;
+.wave-error::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px; /* Chiziqni biroz pastga tushirdik */
+  width: 100%;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Cpath d='M0 5 Q 3 0 6 5 T 12 5 T 18 5 T 24 5' fill='none' stroke='%23ca4754' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  animation: wave-move 0.4s linear infinite;
 }
+
+@keyframes wave-move {
+  from { background-position: 0 0; }
+  to { background-position: 24px 0; }
+}
+
+/* Xato harf miltillashi */
+.animate-error-glow {
+  color: #ca4754 !important;
+  text-shadow: 0 0 12px rgba(202, 71, 84, 0.9) !important;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
